@@ -9,22 +9,32 @@ body {
     background-color: #333;
     color: #fff;
     padding: 1rem;
-    text-align: center;
 }
 
 .navbar-container {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
-.navbar-left h1 {
+.navbar-logo {
+    width: 10em;
+    height: 50px;
+    position: absolute;
+    left: 1rem;
+}
+
+.navbar-center {
+    text-align: center;
+}
+
+.navbar-center h1 {
     margin: 0;
     font-size: 2rem;
 }
 
-.navbar-left p {
+.navbar-center p {
     margin: 0;
     font-size: 1.2rem;
 }
@@ -40,8 +50,8 @@ body {
 
 .card {
     background-color: #fff;
-    width: 22em;
-    height: 25em;
+    width: 300px;
+    height: 300px;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -50,25 +60,15 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    
-}
-.card:hover {
-    color: red;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-    border: 1px solid red;
-}
-
-.card:hover img {
-    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 
 .card img {
-    width: 15em;
-    height: 10em;
+    width: 80px;
+    height: 80px;
     border-radius: 5px;
     margin-bottom: 1rem;
+    transition: transform 0.3s ease;
 }
 
 .card h2 {
@@ -79,4 +79,16 @@ body {
 .card p {
     font-size: 1rem;
     color: #333;
+}
+
+.card:hover {
+    color: red;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    border: 1px solid red;
+}
+
+.card:hover img {
+    transform: scale(1.1);
 }
